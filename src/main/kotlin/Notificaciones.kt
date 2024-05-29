@@ -6,6 +6,8 @@ The message should include:
 The exact number of notifications when there are less than 100 notifications.
 99+ as the number of notifications when there are 100 notifications or more.
 
+Your phone is blowing up! You have 99+ notifications.
+
 */
 
 fun main() {
@@ -20,12 +22,12 @@ fun main() {
 fun printNotificationSummary(numberOfMessages: Int) {
 
     if( numberOfMessages == 1 ) {
-    println("Tienes 1 notificacion.")
+    println("You have one notification")
     }
     else if(numberOfMessages in 2..99){
-        println("Tienes $numberOfMessages notificaciones.")
+        println("You have $numberOfMessages notifications.")
     }
     else if(numberOfMessages > 99) {
-        println("Tienes 99+ notificaciones.")
+        println("Your phone is blowing up! You have 99+ notifications.")
     }
 }
