@@ -30,31 +30,32 @@ fun main() {
     val selectedOption = input.next()
 
     do {
-        if (selectedOption.equals("1",true)){
-            conversionFormula = celsiusToFahrenheit
-            initialUnit = "Celsius"
-            finalUnit = "Fahrenheit"
-            validAnswer = true
+        when(selectedOption) {
+            "1" -> {
+                conversionFormula = celsiusToFahrenheit
+                initialUnit = "Celsius"
+                finalUnit = "Fahrenheit"
+                validAnswer = true
 
-        }
-        else if (selectedOption.equals("2",true)){
-            conversionFormula = kelvinToCelsius
-            initialUnit = "Kelvin"
-            finalUnit = "Celsius"
-            validAnswer = true
+            }
 
-        }
+            "2" -> {
+                conversionFormula = kelvinToCelsius
+                initialUnit = "Kelvin"
+                finalUnit = "Celsius"
+                validAnswer = true
+            }
 
-        else if (selectedOption.equals("3",true)){
-            conversionFormula = fahrenheitToKelvin
-            initialUnit = "Fahrenheit"
-            finalUnit = "Kelvin"
-            validAnswer = true
+            "3" -> {
+                conversionFormula = fahrenheitToKelvin
+                initialUnit = "Fahrenheit"
+                finalUnit = "Kelvin"
+                validAnswer = true
+            }
+
+            else -> println("Enter a valid option")
         }
-        else{
-            println("Enter a valid number.")
-        }
-    }while (!validAnswer)
+    } while(!validAnswer)
 
     println("Enter the initial measurement: ")
     initialMeasurement = input.nextDouble()
