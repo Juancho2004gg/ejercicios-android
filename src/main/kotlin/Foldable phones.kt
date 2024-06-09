@@ -1,3 +1,5 @@
+import java.sql.DriverManager.println
+
 /*
 * Typically, a phone screen turns on and off when the power button is pressed. In contrast,
 * if a foldable phone is folded, the main inner screen on a foldable phone doesn't turn on when the power button is pressed.
